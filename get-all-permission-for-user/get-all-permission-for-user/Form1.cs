@@ -21,6 +21,12 @@ namespace get_all_permission_for_user
                 string loginUser = textBox3.Text;
                 string loginPassword = textBox4.Text;
                 string file = textBox5.Text;
+
+                if (user == "" || url == ""|| loginUser == ""|| file == "")
+                {
+                    label5.Text = "everything except password is required";
+                    return;
+                }
                 if (File.Exists(file))
                 {
                     File.Delete(file);
@@ -35,6 +41,10 @@ namespace get_all_permission_for_user
 
                 HttpContent content = new StringContent(body);
                 var auth = await client.PostAsync(url + "/authentication-point/alm-authenticate", content);
+                if (!auth.IsSuccessStatusCode)
+                {
+                    throw new Exception(auth.StatusCode.ToString());
+                }
                 auth = await client.PostAsync(url + "/rest/site-session", content);
                 auth = await client.GetAsync(url + $"/v2/sa/api/site-users/{user}/projects");
 
@@ -43,13 +53,13 @@ namespace get_all_permission_for_user
                 var jsonString = await auth.Content.ReadAsStringAsync();
 
                 dynamic result = JsonConvert.DeserializeObject<object>(jsonString);
-                int counter = result.projects.project.Count;
-                for (int i = 0; i < counter; i++)
+                int pcount = result.projects.project.Count;
+                for (int i = 0; i < pcount; i++)
                 {
-
+                    
                     var domain = result.projects.project[i]["domain-name"].ToString();
                     var project = result.projects.project[i].name.ToString();
-
+                    label5.Text = $"Checking - {domain} {project}";
                     auth = await client.GetAsync(url + $"/v2/sa/api/domains/{domain}/projects/{project}/users/{user}/groups");
                     var finalRes = auth.Content.ReadAsStringAsync().Result;
                     dynamic desRes = JsonConvert.DeserializeObject<object>(finalRes);
@@ -61,7 +71,7 @@ namespace get_all_permission_for_user
                         using (StreamWriter writer = new StreamWriter(file, true)) //true is to add into the file
                         {
                             writer.WriteLine(domain + " " + project + " " + groups);
-
+                            
                         }
                     }
                 }

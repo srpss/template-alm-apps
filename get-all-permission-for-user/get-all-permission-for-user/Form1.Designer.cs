@@ -40,6 +40,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -146,11 +147,21 @@
             this.textBox5.TabIndex = 11;
             this.textBox5.Text = "C:\\Temp\\file.txt";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(202, 272);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(522, 20);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "everything is required, except password. This will state \'done\' once completed";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -184,5 +195,6 @@
         private Label label5;
         private Label label6;
         private TextBox textBox5;
+        private Label label7;
     }
 }
