@@ -1,0 +1,71 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Martin.Slavov\\source\\repos\\get-all-permission-for-user\\get-all-permission-for-user\\get-all-permission-for-user.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Martin.Slavov\\source\\repos\\get-all-permission-for-user\\get-all-permission-for-user\\get-all-permission-for-user.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Martin.Slavov\\source\\repos\\get-all-permission-for-user\\get-all-permission-for-user\\get-all-permission-for-user.csproj",
+        "projectName": "get-all-permission-for-user",
+        "projectPath": "C:\\Users\\Martin.Slavov\\source\\repos\\get-all-permission-for-user\\get-all-permission-for-user\\get-all-permission-for-user.csproj",
+        "packagesPath": "C:\\Users\\Martin.Slavov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Martin.Slavov\\source\\repos\\get-all-permission-for-user\\get-all-permission-for-user\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Martin.Slavov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

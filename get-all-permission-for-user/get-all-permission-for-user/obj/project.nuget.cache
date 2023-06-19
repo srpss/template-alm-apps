@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ytJIoB4zkMsiSzeCsbKr7aOnkvDb1AjgpgvoYhoSvJ9x/6w7B0UMFgf55uEQVCt0NzwuH69bSIyKy9jbvw6xGQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Martin.Slavov\\source\\repos\\get-all-permission-for-user\\get-all-permission-for-user\\get-all-permission-for-user.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Martin.Slavov\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
